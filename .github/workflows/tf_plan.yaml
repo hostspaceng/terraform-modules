@@ -26,7 +26,7 @@ jobs:
       uses: hashicorp/setup-terraform@v2.0.2
 
 
-    - name: Terraform Init & Apply
+    - name: Terraform Init & Dry Apply
       run: |
         cd dev-resources
         echo "** Running Terraform Init**"
@@ -37,3 +37,6 @@ jobs:
 
         echo "** Running Terraform Plan**"
         terraform plan
+
+        echo "** Running Terraform Dry Apply**"
+        terraform apply -auto-approve --dry-run
