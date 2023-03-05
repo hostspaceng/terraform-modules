@@ -3,7 +3,7 @@
 Basic configuration for creating an eks cluster
 
 
-## Perequisite
+## Prerequisite
 
 - install aws cli  on your terminal  using the command below
 `curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
