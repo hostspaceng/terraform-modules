@@ -22,6 +22,10 @@ sudo ./aws/install`
   
   
 ## Next steps
+
+Provide values for any required input variables. You can either set these directly in a `terraform.tfvars` file, or by passing them in as environment variables.
+
+
 run `terraform init`, =====> `terraform plan` =======> and lastly `terraform apply`
 
 
