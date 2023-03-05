@@ -35,21 +35,26 @@ To confirm if we can access eks run `kubectl get nodes`
 
 To Assume eks-admin role edit the `.aws/config` file and add the following
 
-```[profile eks-admin]
+```
+[profile eks-admin]
 role_arn = add role arn
-source_profile = user1```
+source_profile = user1 
+```
 
 To Confirm if you have assumed the eks-admim role `aws sts get-caller-identity --profile eks-admin`
 
 Update kubernates config to use eks-admin profile `aws eks update-kubeconfig \` fill the promts with the following
 
- ```> --name hostspace-eks\
+ ``` 
+ > --name hostspace-eks\
  > --region us-east-1 \
- > --profile eks-admin```
+ > --profile eks-admin
+ 
+ ```
 
 confirm you can access eks with the eks-admin profile run
 
-`kubectl auth can-i "*" "*"`
+`kubectl auth can-i "*" "*" `
 
 
 
