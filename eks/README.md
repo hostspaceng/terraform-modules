@@ -1,6 +1,6 @@
-# Creating an AWS Ec2 instance with Terraform
+# Creating an AWS EKS Cluster with Terraform
 
-Basic configuration for creating aws instance, and playing around with terraform command
+Basic configuration for creating an eks cluster
 
 
 ## Perequisite
@@ -9,6 +9,8 @@ Basic configuration for creating aws instance, and playing around with terraform
 `curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install`
+
+- ensure you have kubectl installed
 
 - To use your IAM credentials to authenticate the Terraform AWS provider, set the AWS_ACCESS_KEY_ID environment variable.
    
