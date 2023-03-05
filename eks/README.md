@@ -31,7 +31,7 @@ To confirm if we can access eks run `kubectl get nodes`
 
 - By default user1 would be created download access keys for the user from the console.
 
-- create a local aws profile for the new user `aws configure --profile user1` and inser access key and security key
+- create a local aws profile for the new user `aws configure --profile user1` and insert access key and security key
 
 To Assume eks-admin role edit the `.aws/config` file and add the following
 
