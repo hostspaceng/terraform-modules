@@ -23,15 +23,22 @@ sudo ./aws/install`
   
 ## Next steps
 
-Provide values for any required input variables. You can either set these directly in a `terraform.tfvars` file, or by passing them in as environment variables.
+- Clone this repository
+
+- Navigate to this directory 
+
+- Initialize the module: terraform init
 
 
-run `terraform init`, =====> `terraform plan` =======> and lastly `terraform apply`
+- Provide values for any required input variables. You can either set these directly in a `terraform.tfvars` file, or by passing them in as environment variables.
 
 
-Run `aws eks update-kubeconfig --region us-east-1` to update kubernates context in ordert to conect with the cluster
+- run `terraform init`, =====> `terraform plan` =======> and lastly `terraform apply`
 
-To confirm if we can access eks run `kubectl get nodes`
+
+- Run `aws eks update-kubeconfig --region us-east-1` to update kubernates context in ordert to conect with the cluster
+
+### To confirm if we can access eks run `kubectl get nodes`
 
 ## Assuming eks-admin Iam role
 
