@@ -1,0 +1,28 @@
+# Ignore .terraform directory
+.terraform/
+
+# Ignore any generated files
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+# Ignore any override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore any local files
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore any plan files
+*.tfplan
+
+# Ignore any log files
+*.log
+*.out
+*.aux
+
+# Ignore any .DS_Store files (macOS specific)
+.DS_Store
