@@ -18,6 +18,7 @@ variable "instance_type" {
 variable "subnet_id" {
   description = "The VPC subnet the instance(s) will be created in"
   type        = string
+  default = "subnet-057a97a7c3626bf64"
 }
 
 variable "ami_id" {
@@ -32,7 +33,8 @@ variable "number_of_instances" {
 }
 
 
-variable "ami_key_pair_name" {
-  description = "name of your keypair"
-  default     = "./mykeypair.pem"
+variable "ssh_private_key" {
+  description = "pem file of Keypair we used to login to EC2 instances"
+  type        = string
+  default     = "mykeypair"
 }
