@@ -4,11 +4,11 @@ resource "aws_instance" "ec2_instance" {
   instance_type   = var.instance_type
   key_name        = var.key_pair
   security_groups = [aws_security_group.security_group.id, ]
-  count           = var.number_of_instances
+  #count           = var.number_of_instances
 
 
   tags = {
-    Name = "${var.instance_name}-${count.index}"
+    Name = "${var.instance_name}"
   }
 }
 
