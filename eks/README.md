@@ -3,7 +3,7 @@
 Basic configuration for creating an eks cluster
 
 
-## Perequisite
+## Prerequisite
 
 - install aws cli  on your terminal  using the command below
 `curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -22,12 +22,23 @@ sudo ./aws/install`
   
   
 ## Next steps
-run `terraform init`, =====> `terraform plan` =======> and lastly `terraform apply`
+
+- Clone this repository
+
+- Navigate to this directory 
+
+- Initialize the module: terraform init
 
 
-Run `aws eks update-kubeconfig --region us-east-1` to update kubernates context in ordert to conect with the cluster
+- Provide values for any required input variables. You can either set these directly in a `terraform.tfvars` file, or by passing them in as environment variables.
 
-To confirm if we can access eks run `kubectl get nodes`
+
+- run `terraform init`, =====> `terraform plan` =======> and lastly `terraform apply`
+
+
+- Run `aws eks update-kubeconfig --region us-east-1` to update kubernates context in ordert to conect with the cluster
+
+### To confirm if we can access eks run `kubectl get nodes`
 
 ## Assuming eks-admin Iam role
 
