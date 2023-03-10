@@ -28,7 +28,7 @@ resource "aws_ebs_volume" "ebs_volume" {
 }
 
 ######################################################
-##    Attachmening the volume to the instance       ##
+##       Attaching the volume to the instance       ##
 ######################################################  
 
 resource "aws_volume_attachment" "ebs_att" {
