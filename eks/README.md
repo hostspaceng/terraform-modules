@@ -36,7 +36,7 @@ sudo ./aws/install`
 - run `terraform init`, =====> `terraform plan` =======> and lastly `terraform apply`
 
 
-- Run `aws eks update-kubeconfig --region us-east-1` to update kubernates context in ordert to conect with the cluster
+- Run `aws eks update-kubeconfig --name hostspace-eks --region us-east-1` to update kubernates context in ordert to conect with the cluster
 
 ### To confirm if we can access eks run `kubectl get nodes`
 
