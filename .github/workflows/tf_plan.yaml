@@ -1,0 +1,42 @@
+
+name: 'Terraform Plan & Apply'
+
+on:
+  push:
+    branches: [ "test" ]
+  pull_request:
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Configure AWS Credentials Action For GitHub Actions
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1 
+    - name: Setup Terraform CLI
+      uses: hashicorp/setup-terraform@v2.0.2
+
+
+    - name: Terraform Init & Dry Apply
+      run: |
+        cd dev-resources
+        echo "** Running Terraform Init**"
+        terraform init
+
+        echo "** Running Terraform Validate**"
+        terraform validate
+
+        echo "** Running Terraform Plan**"
+        terraform plan
+
+        echo "** Running Terraform Dry Apply**"
+        terraform apply -auto-approve --dry-run
