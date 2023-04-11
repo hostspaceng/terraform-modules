@@ -19,14 +19,13 @@ resource "aws_instance" "ec2_instance" {
   ami             = var.ami_id
   subnet_id       = var.subnet_id
   instance_type   = var.instance_type
-
-  #key_name        = var.ami_key_pair_name
-  #security_groups = aws_security_group.security_group.id
-  #count           = var.number_of_instances
+  key_name        = var.ami_key_pair_name
+  security_groups = [aws_security_group.security_group.id,]
+  count           = var.number_of_instances
 
 
   tags = {
-    Name = "${var.instance_name}"
+    Name = "instance-${count.index}"
   }
 }
 
