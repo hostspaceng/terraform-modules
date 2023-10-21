@@ -45,9 +45,3 @@ Additionally, if you find bugs or areas of improvement, don’t hesitate to open
 ### Community Engagement
 
 Your insights and expertise can help improve the quality and performance of our Terraform modules for the benefit of the entire community. Every contribution is valuable, and together, we can make cloud resource management efficient and hassle-free!
-
-## License
-
-These modules are distributed under the MIT License. See [LICENSE](https://github.com/hostspaceng/terraform-modules/blob/main/LICENSE) for more information. 
-
-Be sure to replace placeholders and example codes with actual paths and code snippets based on your modules’ structure and requirements. Add detailed information about each input variable and output to help users understand how to use the modules effectively.
