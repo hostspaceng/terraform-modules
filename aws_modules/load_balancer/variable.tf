@@ -3,3 +3,7 @@ variable "alb_name" {
   type = string
 }
 
+variable "alb_tg_name" {
+  description ="name of the application load balancer target group"
+  type = string
+}
